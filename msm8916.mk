@@ -144,6 +144,7 @@ PRODUCT_PACKAGES += \
 # Motorola
 PRODUCT_PACKAGES += \
     libmoto
+    libboringssl-compat
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -181,6 +182,21 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     ueventd.qcom.rc
 
+# RIL
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig
+
+# Shim libraries
+PRODUCT_PACKAGES += \
+    libshim_camera \
+    libshim_log \
+    libshim_mdmcutback \
+    libshim_ril
+
+# Stlport
+PRODUCT_PACKAGES += \
+    libstlport
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
@@ -207,7 +223,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
-    libstlport \
     libQWiFiSoftApCfg \
     tcpdump \
     wcnss_service
