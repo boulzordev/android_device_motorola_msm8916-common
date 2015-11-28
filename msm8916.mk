@@ -185,6 +185,8 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
+    librmnetctl \
+    rmnetcli
 
 # Shim libraries
 PRODUCT_PACKAGES += \
