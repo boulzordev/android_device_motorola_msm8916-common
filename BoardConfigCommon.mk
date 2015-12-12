@@ -110,9 +110,6 @@ TARGET_USES_MOTOROLA_LOG := true
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# Power
-TARGET_POWERHAL_VARIANT := qcom
-
 # Properties
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
