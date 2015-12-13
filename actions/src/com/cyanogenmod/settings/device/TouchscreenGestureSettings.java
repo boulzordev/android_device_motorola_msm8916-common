@@ -17,8 +17,10 @@
 package com.cyanogenmod.settings.device;
 
 import android.os.Bundle;
+import android.content.res.Resources;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
+import android.preference.SwitchPreference;
 
 public class TouchscreenGestureSettings extends PreferenceActivity {
     private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
@@ -32,6 +34,15 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         if (ambientDisplayCat != null) {
             ambientDisplayCat.setEnabled(CMActionsSettings.isDozeEnabled(getContentResolver()));
         }
+        Resources res = getResources();
+        boolean hasChopChop = res.getBoolean(R.bool.config_hasChopChop);
+        if (!hasChopChop){
+            //Check if we have to hide the chop chop entry
+            SwitchPreference chopChopPref = (SwitchPreference) findPreference("gesture_chop_chop");
+            PreferenceCategory mCategory = (PreferenceCategory) findPreference("actions_key");
+            mCategory.removePreference(chopChopPref);
+        }
+
     }
 
     @Override
