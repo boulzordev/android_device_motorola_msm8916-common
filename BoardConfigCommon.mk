@@ -37,7 +37,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M androidboot.bootdevice=7824900.sdhci utags.blkdev=/dev/block/platform/soc.0/by-name/utags utags.backup=/dev/block/platform/soc.0/by-name/utagsBackup movablecore=160M androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -45,7 +45,6 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8916
-TARGET_KERNEL_CONFIG := osprey-stock_defconfig
 KERNEL_DEFCONFIG := $(TARGET_KERNEL_CONFIG)
 
 # Audio
@@ -111,7 +110,7 @@ TARGET_USES_MOTOROLA_LOG := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Properties
-TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
@@ -140,3 +139,5 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+$(warning $(TARGET_SYSTEM_PROP))
