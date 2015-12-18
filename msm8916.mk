@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libOmxVidcCommon \
     libstagefrighthw \
     libstagefright_soft_h264enc \
     libstagefright_soft_h264dev
