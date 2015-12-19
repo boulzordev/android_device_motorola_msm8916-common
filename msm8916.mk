@@ -146,7 +146,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libdashplayer \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -158,7 +157,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_soft_h264enc \
     libstagefright_soft_h264dev
-
 
 # Power
 PRODUCT_PACKAGES += \
