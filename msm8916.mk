@@ -67,11 +67,17 @@ PRODUCT_COPY_FILES +=  \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8916
+    camera.msm8916 \
+    libboringssl-compat \
+    libbson
 
 # Configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/apns-conf.xml:system/etc/apns-conf.xml
+
+# CMActions
+PRODUCT_PACKAGES += \
+    Actions
 
 # Display
 PRODUCT_PACKAGES += \
@@ -79,10 +85,6 @@ PRODUCT_PACKAGES += \
     copybit.msm8916 \
     hwcomposer.msm8916 \
     memtrack.msm8916
-
-# CMActions
-PRODUCT_PACKAGES += \
-    Actions
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -127,7 +129,6 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    libbson \
     libxml2 \
     libtune2fs \
     Mms
@@ -137,8 +138,7 @@ PRODUCT_PACKAGES += \
 
 # Motorola
 PRODUCT_PACKAGES += \
-    libmoto \
-    libboringssl-compat
+    libmoto 
 
 # OMX
 PRODUCT_PACKAGES += \
