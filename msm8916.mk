@@ -68,7 +68,6 @@ PRODUCT_COPY_FILES +=  \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
-    libboringssl-compat \
     libbson
 
 # Configs
@@ -183,7 +182,6 @@ PRODUCT_PACKAGES += \
 
 # Shim libraries
 PRODUCT_PACKAGES += \
-    libshim_camera \
     libshim_log \
     libshim_mdmcutback \
     libshim_ril
