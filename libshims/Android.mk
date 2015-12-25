@@ -13,15 +13,38 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := \
-    moto_log.c \
-    moto_camera.c \
-    moto_rild.c
+# Camera
 
-LOCAL_SHARED_LIBRARIES := libutils libgui libbinder
-LOCAL_MODULE := libmoto
+LOCAL_SRC_FILES := \
+    gui/SensorManager.cpp \
+    moto_camera_misc.c
+
+LOCAL_SHARED_LIBRARIES := libutils libgui liblog libbinder
+LOCAL_MODULE := libshim_camera
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+# Log
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := moto_log.c
+LOCAL_MODULE := libshim_log
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+# RIL
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := moto_ril.c
+LOCAL_SHARED_LIBRARIES := libbinder
+LOCAL_MODULE := libshim_ril
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
