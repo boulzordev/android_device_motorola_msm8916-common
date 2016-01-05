@@ -70,10 +70,6 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libbson
 
-# Configs
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/data/apns-conf.xml:system/etc/apns-conf.xml
-
 # CMActions
 PRODUCT_PACKAGES += \
     Actions
