@@ -189,12 +189,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli
 
-# Shim libraries
-PRODUCT_PACKAGES += \
-    libshim_log \
-    libshim_mdmcutback \
-    libshim_ril
-
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
