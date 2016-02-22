@@ -167,6 +167,15 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     ueventd.qcom.rc
 
+#RCS //Needed for Contacts and Mms Apps
+RCS := rcs_service_aidl
+RCS += rcs_service_aidl.xml
+RCS += rcs_service_aidl_static
+RCS += rcs_service_api
+RCS += rcs_service_api.xml
+
+PRODUCT_PACKAGES += $(RCS)
+    
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
