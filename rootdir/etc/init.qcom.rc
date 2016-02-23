@@ -81,7 +81,6 @@ on init
 
 on fs
     mount_all fstab.qcom
-    write /sys/kernel/boot_adsp/boot 1
 
 
     # Mount modem FSG partition
