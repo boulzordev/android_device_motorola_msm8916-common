@@ -46,6 +46,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
+# Motorola Camera permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
