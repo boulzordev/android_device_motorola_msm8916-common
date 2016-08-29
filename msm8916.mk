@@ -77,7 +77,8 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PACKAGES += \
     camera.msm8916 \
     libbson \
-    Snap
+    Snap \
+    org.codeaurora.camera.jar
 
 # CMActions
 PRODUCT_PACKAGES += \
@@ -106,6 +107,14 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
+
+#IMS EXT
+IMS_EXT := ims-ext-common
+PRODUCT_PACKAGES += $(IMS_EXT)
+
+#IMS SETTINGS
+IMS_SETTINGS := imssettings
+PRODUCT_PACKAGES += $(IMS_SETTINGS)
 
 # IRSC
 PRODUCT_COPY_FILES += \
